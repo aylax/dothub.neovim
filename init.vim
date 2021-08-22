@@ -3,6 +3,8 @@
 " ===============================================
 
 
+"" == Sets Basic ==
+
 " Sets no backup
 set nobackup       " no backup files
 set noswapfile     " no swap files
@@ -41,3 +43,51 @@ set matchtime=1                   " Brackets highlight residence time
 set laststatus=2                  " Show status line
 
 
+"" == Sets Plugin ==
+call plug#begin('~/.config/nvim/plugins')
+
+"" Theme
+Plug 'rose-pine/neovim', {'as': 'rose-pine' }
+Plug 'hoob3rt/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
+
+"" NERDTree
+Plug 'preservim/nerdtree'
+
+"" Snippets
+Plug 'SirVer/ultisnips'
+
+"" Fast Search
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
+
+"" With NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>r :NERDTreeRefreshRoot<CR>
+nnoremap <leader><space> :NERDTreeToggle<CR>
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+let NERDTreeShowHidden=1
+
+"" With Snippets
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "snippets.d"]
+
+"" With Fzf
+nnoremap <silent> <Leader>f :Files<CR>
+nnoremap <silent> <Leader>l :Lines<CR>
+nnoremap <silent> <Leader>b :Buffers<CR>
+
+
+"" === Set Color Theme ==
+colorscheme rose-pine
+lua << EOF
+require'lualine'.setup {
+    options = { theme = 'rose-pine' }
+}
+EOF
