@@ -18,6 +18,7 @@ vim # VimCommand :PlugInstall
 
 ## Inspiration & Art :heart:
 - [rose-pine](https://github.com/rose-pine/rose-pine-theme)
+- [mhinz](https://github.com/mhinz/vim-startify)
 
 
 # License
