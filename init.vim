@@ -46,6 +46,9 @@ set laststatus=2                  " Show status line
 "" == Sets Plugin ==
 call plug#begin('~/.config/nvim/plugins')
 
+"" Start Menu
+Plug 'mhinz/vim-startify'
+
 "" Theme
 Plug 'rose-pine/neovim', {'as': 'rose-pine' }
 Plug 'hoob3rt/lualine.nvim'
@@ -63,6 +66,10 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 call plug#end()
+
+
+"" Startify
+let g:startify_custom_header = ['   Happy hacking, friend - Vim ♥ you!']
 
 "" With NERDTree
 nnoremap <leader>n :NERDTreeFocus<CR>
