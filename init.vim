@@ -83,7 +83,7 @@ let NERDTreeShowHidden=1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "snippets"]
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "Hsnippets"]
 
 "" With Fzf
 nnoremap <silent> <Leader>f :Files<CR>
