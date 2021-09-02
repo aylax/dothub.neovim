@@ -1,0 +1,23 @@
+#+title: aylax's neovim
+#+email: zhoubye@foxmail.com
+#+author: aylax zhou
+#+language: en
+#+keywords: git readme neovim
+
+The repo used to customize neovim confs.
+
+** install
+#+begin_src sh
+git clone https://github.com/aylax/dothub.neovim.git ~/.config/nvim
+#+end_src
+
+** usage
+The repo is available as confs which you can load in neovim.
+
+** refs & thanks
+- [[https://github.com/RichardLitt/standard-readme.git][standard readme]]
+- [[https://github.com/mhinz/vim-startify][mhinz's vim startify]]
+- [[https://github.com/rose-pine/rose-pine-theme.git][color theme : rose pine]]
+
+** license
+BSD-3-Clause © aylax
